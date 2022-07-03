@@ -22,7 +22,6 @@ time, mark, audio, video {
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background-color: rgb(236, 236, 236);
-    height: 60vh;
 }
 
 div,
@@ -30,9 +29,10 @@ fieldset {
     display: flex;
 }
 
-img {
-
-   max-width: 35vw;
+.image {
+   background-image: url(./images/plant.avif);
+   width: clamp(300px, 40vw, 500px);
+   flex: 1 0 auto;
    height: auto; 
 }
 
@@ -78,7 +78,11 @@ em {
 }
 
 label {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(0, 0, 129);
+    letter-spacing: .2em;
 }
 
 input {
@@ -110,4 +114,32 @@ input {
 a {
     color: rgb(39, 97, 1);
     font-weight: bold;
+}
+
+.footer {
+    height: 10vh;
+    background-color: grey;
+    color: white;
+    padding: 1rem;
+    align-items: top;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 25vh;
+    opacity: 80%;
+    background-color: black;
+    height: 8rem;
+    width: clamp(300px, 40vw, 500px);
+    color: white;
+    font-size: 80px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Norse Bold';
+}
+
+.logo {
+    height: 8rem;
+    width: auto;
 }
